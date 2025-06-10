@@ -1,4 +1,4 @@
-const Authors_URL = "https://silver-space-meme-x5xgjqvrgjqvh9769-5002.app.github.dev/authors"; // Change if needed
+const Authors_URL = "https://silver-space-meme-x5xgjqvrgjqvh9769-5002.app.github.dev/authors";
 
 fetch(Authors_URL)
   .then(response => {
