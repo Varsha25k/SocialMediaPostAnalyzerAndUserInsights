@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Activity Distribution | Dashboard</title>
+  <meta name="description" content="Pie chart showing activity type distribution.">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    canvas {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #546e7a;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #29434e;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="activityChart" width="400" height="400"></canvas>
+  <br />
+  <button onclick="loadActivityChart()">🔄 Refresh Chart</button>
+  <script src="js/pieChart_user_activity.js"></script>
+</body>
+</html>

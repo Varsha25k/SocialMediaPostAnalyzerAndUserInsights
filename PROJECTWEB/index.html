@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Media Post Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f6f8;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #12318e, #6d2fbd);
+      color: white;
+      padding: 60px 30px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-weight: 600;
+      color: whitesmoke;
+      margin-bottom: 20px;
+    }
+
+    .nav-card {
+      border: none;
+      border-radius: 12px;
+      background-color: whitesmoke;
+      color:rgb(84, 54, 174) ;
+      padding: 25px 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(244, 241, 241, 0.08);
+    }
+
+    .nav-card:hover {
+      transform: translateY(-6px);
+      background-color: #e8f0fe;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-card:active {
+      transform: scale(0.98);
+    }
+
+    .text-decoration-none {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .section-data {
+      background-color: #656ecb;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+
+    .section-charts {
+      background-color: #6d73c9;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 10px 0;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1 class="display-5">📊 Social Media Post Analyzer</h1>
+      <p class="lead">Analyze, visualize, and understand your social data like never before</p>
+    </div>
+
+    <!-- Data Views -->
+    <div class="section-data">
+      <h3 class="section-title">📂 Data Views</h3>
+      <div class="row row-cols-2 row-cols-md-3 g-4">
+        <div class="col"><a href="authors.html" class="text-decoration-none"><div class="nav-card">🧑 Authors</div></a></div>
+        <div class="col"><a href="posts.html" class="text-decoration-none"><div class="nav-card">📝 Posts</div></a></div>
+        <div class="col"><a href="comments.html" class="text-decoration-none"><div class="nav-card">💬 Comments</div></a></div>
+        <div class="col"><a href="likes.html" class="text-decoration-none"><div class="nav-card">👍 Likes</div></a></div>
+        <div class="col"><a href="shares.html" class="text-decoration-none"><div class="nav-card">🔄 Shares</div></a></div>
+        <div class="col"><a href="hashtags.html" class="text-decoration-none"><div class="nav-card">#️⃣ Hashtags</div></a></div>
+        <div class="col"><a href="post_hashtags.html" class="text-decoration-none"><div class="nav-card">🔗 Post Hashtags</div></a></div>
+        <div class="col"><a href="reactions.html" class="text-decoration-none"><div class="nav-card">❤️ Reactions</div></a></div>
+        <div class="col"><a href="post_reactions.html" class="text-decoration-none"><div class="nav-card">🎯 Post Reactions</div></a></div>
+        <div class="col"><a href="user_activity.html" class="text-decoration-none"><div class="nav-card">📈 User Activity</div></a></div>
+      </div>
+    </div>
+
+    <!-- Chart Views -->
+    <div class="section-charts">
+      <h3 class="section-title">📊 Visual Insights</h3>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col"><a href="pie.html" class="text-decoration-none"><div class="nav-card">🥧 Pie Chart</div></a></div>
+        <div class="col"><a href="bar.html" class="text-decoration-none"><div class="nav-card">📊 Bar Chart</div></a></div>
+        <div class="col"><a href="line.html" class="text-decoration-none"><div class="nav-card">📉 Line Chart</div></a></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Social Media Post Analyzer | Made with ❤️ by <strong>[Varsha]</strong></p>
+    </footer>
+
+  </div>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

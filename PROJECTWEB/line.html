@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Monthly Posts Over Time | Dashboard</title>
+  <meta name="description" content="Line chart showing number of posts created each month.">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .chart-container {
+      max-width: 800px;
+      height: 400px; /* FIXED HEIGHT */
+      margin: auto;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  </style>
+</head>
+<body>
+  <h2>📈 Monthly Posts Over Time</h2>
+  <div class="chart-container">
+    <canvas id="lineChart"></canvas>
+  </div>
+
+  <script>
+    fetch("https://silver-space-meme-x5xgjqvrgjqvh9769-5002.app.github.dev/posts-over-time")
+      .then(response => response.json())
+      .then(data => {
+        const labels = data.map(row => row.month);
+        const values = data.map(row => parseInt(row.post_count));
+
+        const ctx = document.getElementById("lineChart").getContext("2d");
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: labels,
+            datasets: [{
+              label: 'Posts per Month',
+              data: values,
+              fill: true,
+              borderColor: 'rgb(75, 192, 192)',
+              backgroundColor: 'rgba(75, 192, 192, 0.2)',
+              tension: 0.3
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      })
+      .catch(error => {
+        console.error("Error fetching data:", error);
+      });
+  </script>
+</body>
+</html>
