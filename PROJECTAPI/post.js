@@ -19,7 +19,7 @@ router.post('/authors', async (req, res) => {
   try {
     const result = await Pool.query(
       'INSERT INTO Authors (authorname, email) VALUES ($1, $2) RETURNING *',
-      [authorname, email]
+      [ authorname, email ]
     );
     res.status(201).json({ message: "Author added", author: result.rows[0] });
   } catch (err) {
